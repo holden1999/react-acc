@@ -1,23 +1,36 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
 
+function setState(value) {
+
+}
+
+
+function onSubmit() {
+    
+}
+
 function App() {
-  return (
+    const nameRef = React.useRef(null)
+
+    // React.useEffect(()=>{
+    //     if (nameRef != null) {
+    //         console.log(nameRef)
+    //     }
+    // },[nameRef])
+
+
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <form onSubmit={onSubmit}>
+          <input
+          type={"text"}
+          name={"name"}
+          ref={(ref) => nameRef(ref)}
+          onChange={(event )=> setState(event.target.value)}
+          />
+          <button type={"submit"}>Submit</button>
+      </form>
     </div>
   );
 }
