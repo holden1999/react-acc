@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React from "react";
+import Header from "./Styling";
 
 //Create Element - 1
 const SayHello = () => {
@@ -12,30 +13,29 @@ const SayHello = () => {
 }
 
 // JSX (Javascript Extension)- 2
-const SayHello2 = () => {
-    const name = "Holden"
-  return <h1>Hello {name}</h1>
+const SayHello2 = (props) => {
+  return <h1>Hello {props.name}</h1>
 }
 
 function App() {
+    const [name, setName] = React.useState("Enigma")
+    const [isActive, setIsActive] = React.useState()
+    React.useEffect(() => {
+        console.log("mounting")
+    },[])
+
+    console.log("Initialization")
   return (
     <div className="App">
-      <header className="App-header">
+        <Header />
         <img src={logo} className="App-logo" alt="logo" />
-        <SayHello />
-        <SayHello2 />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        {/*<SayHello />*/}
+        <SayHello2 name={name} />
+          <SayHello2 name={14022} />
+        <button onClick={() => {
+            setName("Enigma Cipta Humanika")
+        }}>Ubah saya!</button>
+
     </div>
   );
 }
