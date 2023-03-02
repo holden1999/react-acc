@@ -1,9 +1,11 @@
 import React from "react";
 
 const buttonStyle = (lang) => {
-    padding: 20,
-    fontSize: 18,
-    backgroundColor: lang === "id" ? "blue" : "green"
+    return {
+        padding: 20,
+        fontSize: 18,
+        backgroundColor: lang === "id" ? "blue" : "green"
+    }
 }
 
 const Hello = () => {
@@ -27,5 +29,3 @@ const Hello = () => {
         </div>
     )
 }
-
-export default Hello

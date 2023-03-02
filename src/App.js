@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import React from "react";
-import Header from "./Styling";
 
 //Create Element - 1
 const SayHello = () => {
@@ -17,8 +16,30 @@ const SayHello2 = (props) => {
   return <h1>Hello {props.name}</h1>
 }
 
+const styles = () => {
+    return {
+        backgroundColor:"black",
+        height: "100%",
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        color: "white"
+    }
+}
+
+const Header = (props) => {
+    return (
+        <div>
+            <h1 style={{backgroundColor:"red"}}>Ini Header</h1>
+            <h1 style={styles.header(props.active)}>Ini Header</h1>
+            <h1 style={styles.body}>test</h1>
+
+            <h1 className={"header body"}>Ini Header</h1>
+        </div>
+    )
+}
+
 function App() {
-    const [name, setName] = React.useState("Enigma")
     const [isActive, setIsActive] = React.useState()
     React.useEffect(() => {
         console.log("mounting")
@@ -27,15 +48,13 @@ function App() {
     console.log("Initialization")
   return (
     <div className="App">
-        <Header />
+        <header style={styles(isActive)}>
         <img src={logo} className="App-logo" alt="logo" />
         {/*<SayHello />*/}
-        <SayHello2 name={name} />
-          <SayHello2 name={14022} />
-        <button onClick={() => {
-            setName("Enigma Cipta Humanika")
-        }}>Ubah saya!</button>
-
+            <button onClick={() => {
+                setIsActive(!isActive)
+            }}>Click me</button>
+        </header>
     </div>
   );
 }
