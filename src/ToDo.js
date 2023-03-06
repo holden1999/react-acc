@@ -13,7 +13,7 @@ function onSubmit() {
 
 }
 
-function App() {
+function ToDo() {
     //const nameRef = React.useRef(null)
 
     // React.useEffect(()=>{
@@ -24,7 +24,7 @@ function App() {
 
 
   //   return (
-  //   <div className="App">
+  //   <div className="ToDo">
   //     <form onSubmit={onSubmit}>
   //         <input
   //         type={"text"}
@@ -68,4 +68,4 @@ function App() {
     )
 }
 
-export default App;
+export default ToDo;

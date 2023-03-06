@@ -2,6 +2,7 @@ const listStyle = (complete) => ({
     textDecoration: complete ? "line-through" : null
 })
 const ToDo = (props) => {
+    console.log("PROPS", props)
     const {todo, handleToggle} = props
 
     const handleClick = (e) => {
