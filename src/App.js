@@ -1,11 +1,9 @@
 import React from "react";
-import CounterOutput from "./Redux/components/CounterOutput";
-import CounterControl from "./Redux/components/CounterControl";
-import CounterDisplay from "./Redux/CounterDisplay";
+import Landing from "./landing/Landing";
 
-const App = () => {
+function App() {
     return (
-        <CounterDisplay />
+        <Landing />
     )
 }
 export default App
