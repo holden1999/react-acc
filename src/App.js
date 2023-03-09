@@ -1,9 +1,9 @@
 import React from "react";
-import Landing from "./landing/Landing";
+import Main from "./ToDoApi/Main";
 
 function App() {
     return (
-        <Landing />
+        <Main />
     )
 }
 export default App
