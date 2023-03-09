@@ -8,8 +8,8 @@ export const ThemeProvider = ({children}) => {
 
     return (
         <DarkModeContext.Provider value={{
-        }
-        }>
+            isDarkMode, toggleDarkMode
+        }}>
             {children}
         </DarkModeContext.Provider>
     )
