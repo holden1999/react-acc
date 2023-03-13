@@ -6,7 +6,7 @@ const Main = () => {
     const [shouldRefresh, setShouldRefresh] = React.useState(true)
 
     return (
-        <div>
+        <div className={"content"}>
             <Form onRefresh={setShouldRefresh}/>
             <ToDoList shouldRefresh={shouldRefresh} onRefresh={setShouldRefresh}/>
         </div>

@@ -1,24 +1,5 @@
 {
   "todos": [
-    {
-      "title": "Memasak",
-      "done": false,
-      "id": 1
-    },
-    {
-      "title": "main",
-      "done": false,
-      "id": 2
-    },
-    {
-      "title": "ngoding",
-      "done": false,
-      "id": 3
-    },
-    {
-      "title": "membaca buku",
-      "done": false,
-      "id": 4
-    }
+
   ]
 }
